@@ -1,35 +1,20 @@
 import { View, Text, StyleSheet} from "react-native";
 
-const BakeriesScreen = () => {
+interface Props {
+    name: string;
+}
+
+const BakeryCard: React.FC<Props> = ({name}) => {
     return (
         <View>
-            <Text>Bakeries Screen</Text>
+            <Text>Bakery</Text>
         </View>
     )
 };
 
 const styles = StyleSheet.create({
-    sectionContainer: {
-      marginTop: 32,
-      paddingHorizontal: 24,
-    },
-    sectionTitle: {
-      fontSize: 24,
-      fontWeight: '600',
-    },
-    sectionDescription: {
-      marginTop: 8,
-      fontSize: 18,
-      fontWeight: '400',
-    },
-    highlight: {
-      fontWeight: '700',
-    },
-    content: {
-      justifyContent: 'center',
-      alignItems: 'center',
-      marginTop: 150,
-      
+    container: {
+        backgroundColor: '#efefef',
     }
   });
 
