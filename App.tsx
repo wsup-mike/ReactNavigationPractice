@@ -20,7 +20,7 @@ import {
 // import ProfileScreen from './screens/Profile';
 // import BakeriesScreen from './screens/Bakeries';
 import { NavigationContainer } from '@react-navigation/native';
-import {createNativeStackNavigator} from '@react-navigation/native-stack'
+import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import ExploreScreen from './screens/Explore';
 import BakeriesScreen from './screens/Bakeries';
 import ProfileScreen from './screens/Profile';
@@ -36,10 +36,10 @@ function App(): JSX.Element {
 
   return (
     <NavigationContainer>
-      <RootStack.Navigator>
+      <RootStack.Navigator initialRouteName='Explore'>
         <RootStack.Screen name="Explore" component={ExploreScreen} />
         <RootStack.Screen name="Bakeries" component={BakeriesScreen} />
-        <RootStack.Screen name="Explore" component={ProfileScreen} />
+        <RootStack.Screen name="Profile" component={ProfileScreen} />
       </RootStack.Navigator>
     </NavigationContainer>
   );

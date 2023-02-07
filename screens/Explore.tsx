@@ -1,10 +1,11 @@
 import React from "react";
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, ScrollView } from "react-native";
 import BakeryCard from "../components/BakeryCard";
+import Menu from "../components/Menu";
 
 const ExploreScreen = () => {
     return (
-        <View style={styles.container}>
+        <ScrollView style={styles.container}>
             <Text style={styles.screenTitle}>Bakeries</Text>
             <View>
                 <Text style={styles.sectionTitle}>Bakeries Near You</Text>
@@ -17,7 +18,8 @@ const ExploreScreen = () => {
                 <BakeryCard name="Mom's Bakery" />
                 <BakeryCard name="Red Ribbon Bakery" />
             </View>
-        </View>
+            <Menu />
+        </ScrollView>
     );
 };
 
