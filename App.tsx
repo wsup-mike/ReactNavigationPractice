@@ -17,12 +17,14 @@ import {
   View,
 } from 'react-native';
 import ExploreScreen from './screens/Explore';
+import ProfileScreen from './screens/Profile';
+import BakeriesScreen from './screens/Bakeries';
 
 
 function App(): JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
 
-  return <ExploreScreen />;
+  return <BakeriesScreen />;
 
   return (
     <SafeAreaView>

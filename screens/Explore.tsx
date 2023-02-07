@@ -5,6 +5,7 @@ import BakeryCard from "../components/BakeryCard";
 const ExploreScreen = () => {
     return (
         <View style={styles.container}>
+            <Text style={styles.screenTitle}>Bakeries</Text>
             <View>
                 <Text style={styles.sectionTitle}>Bakeries Near You</Text>
                 <BakeryCard name="Rowie's Bakery" />
@@ -22,7 +23,8 @@ const ExploreScreen = () => {
 
 const styles = StyleSheet.create({
     container: {
-
+        padding: 16, 
+        marginTop: 24,
     },
     
     restaurantCard: {
@@ -32,6 +34,12 @@ const styles = StyleSheet.create({
     sectionTitle: {
         fontSize: 16,
         marginTop: 16,
+    },
+
+    screenTitle: {
+        fontSize: 24,
+        marginTop: 8,
+        fontWeight: 'bold',
     }
 });
 
