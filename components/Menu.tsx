@@ -2,17 +2,30 @@ import React from "react";
 import { View, Text, StyleSheet, TouchableOpacity} from "react-native";
 
 
-const BakeryCard: React.FC<Props> = ({name}) => {
+const Menu = () => {
     return (
         <View style={styles.container}>
-            <TouchableOpacity>
-                <Text>Explore</Text>
+            <Text style={styles.title}>Navigation</Text>
+            <TouchableOpacity 
+                onPress={() => { 
+                    // go to Explore
+                }}
+            >
+                <Text style={styles.link}>Explore</Text>
             </TouchableOpacity>
-            <TouchableOpacity>
-                <Text>Bakeries</Text>
+            <TouchableOpacity 
+                onPress={() => { 
+                    // go to Bakeries
+                }}
+            >
+                <Text style={styles.link}>Bakeries</Text>
             </TouchableOpacity>
-            <TouchableOpacity>
-                <Text>Profile</Text>
+            <TouchableOpacity 
+                onPress={() => { 
+                    // go to Profile
+                }}
+            >
+                <Text style={styles.link}>Profile</Text>
             </TouchableOpacity>
         </View>
     )
@@ -23,7 +36,17 @@ const styles = StyleSheet.create({
         backgroundColor: '#efefef',
         padding: 16,
         marginTop: 8,
+    },
+
+    link: {
+        fontSize: 16,
+        marginTop: 4,
+        color: '#097ade',
+    },
+
+    title: {
+        fontSize: 18,
     }
   });
 
-export default BakeryCard;
+export default Menu;

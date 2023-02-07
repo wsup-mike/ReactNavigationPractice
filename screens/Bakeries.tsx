@@ -1,6 +1,7 @@
 import React from "react";
 import { View, Text, ScrollView, StyleSheet } from "react-native";
 import BakeryCard from "../components/BakeryCard";
+import Menu from "../components/Menu";
 
 const BakeriesScreen = () => {
     return (
@@ -14,6 +15,7 @@ const BakeriesScreen = () => {
                 <BakeryCard name="Lutz's Bakery" />
                 <BakeryCard name="Red Ribbon Bakery" />
             </ScrollView>
+            <Menu />
         </View>
     )
 };
