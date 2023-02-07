@@ -24,14 +24,19 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import ExploreScreen from './screens/Explore';
 import BakeriesScreen from './screens/Bakeries';
 import ProfileScreen from './screens/Profile';
+import BakeryScreen from './screens/Bakery';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 export type RootStackParams = {
   Explore;
   Bakeries;
   Profile;
+  Bakery: {
+    name: string;
+  };
 };
 
-const RootStack = createNativeStackNavigator<RootStackParams>();
+const RootStack = createBottomTabNavigator()
 
 function App(): JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
@@ -46,6 +51,7 @@ function App(): JSX.Element {
         <RootStack.Screen name="Explore" component={ExploreScreen} />
         <RootStack.Screen name="Bakeries" component={BakeriesScreen} />
         <RootStack.Screen name="Profile" component={ProfileScreen} />
+        <RootStack.Screen name="Bakery" component={BakeryScreen} />
       </RootStack.Navigator>
     </NavigationContainer>
   );

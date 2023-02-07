@@ -1,19 +1,53 @@
 import React from "react";
 import { View, Text, ScrollView, StyleSheet } from "react-native";
+import { RootStackParams } from "../App";
 import BakeryCard from "../components/BakeryCard";
 import Menu from "../components/Menu";
+import {NativeStackScreenProps} from '@react-navigation/native-stack';
 
-const BakeriesScreen = () => {
+type Props = NativeStackScreenProps<RootStackParams, "Bakeries">;
+
+const BakeriesScreen = ({navigation}: Props) => {
     return (
         <View style={styles.container}>
             <Text style={styles.screenTitle}>Bakeries Screen</Text>
             <ScrollView>
-                <BakeryCard name="Rowie's Bakery" />
-                <BakeryCard name="Mom's Bakery" />
-                <BakeryCard name="Panera Foods" />
-                <BakeryCard name="Dinkel's Bakery" />
-                <BakeryCard name="Lutz's Bakery" />
-                <BakeryCard name="Red Ribbon Bakery" />
+                <BakeryCard 
+                    name="Rowie's Bakery" 
+                    onPress={(name) => {
+                        navigation.navigate("Bakery", {name: name});
+                    }} 
+                />
+                <BakeryCard 
+                    name="Mom's Bakery" 
+                    onPress={(name) => {
+                        navigation.navigate("Bakery", {name: name});
+                    }}
+                />
+                <BakeryCard 
+                    name="Panera Foods" 
+                    onPress={(name) => {
+                        navigation.navigate("Bakery", {name: name});
+                    }}
+                />
+                <BakeryCard 
+                    name="Dinkel's Bakery" 
+                    onPress={(name) => {
+                        navigation.navigate("Bakery", {name: name});
+                    }}
+                />
+                <BakeryCard 
+                    name="Lutz's Bakery" 
+                    onPress={(name) => {
+                        navigation.navigate("Bakery", {name: name});
+                    }}
+                />
+                <BakeryCard 
+                    name="Red Ribbon Bakery" 
+                    onPress={(name) => {
+                        navigation.navigate("Bakery", {name: name});
+                    }}
+                />
             </ScrollView>
             <Menu />
         </View>

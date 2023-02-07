@@ -1,15 +1,18 @@
 import React from "react";
-import { View, Text, StyleSheet} from "react-native";
+import { View, Text, StyleSheet, TouchableOpacity} from "react-native";
 
 interface Props {
     name: string;
+    onPress: (name: string) => void
 }
 
-const BakeryCard: React.FC<Props> = ({name}) => {
+const BakeryCard: React.FC<Props> = ({name, onPress}) => {
     return (
-        <View style={styles.container}>
-            <Text>{name}</Text>
-        </View>
+        <TouchableOpacity onPress={() => onPress(name)}>
+            <View style={styles.container}>
+                <Text>{name}</Text>
+            </View>
+        </TouchableOpacity>
     )
 };
 
