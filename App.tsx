@@ -16,32 +16,32 @@ import {
   useColorScheme,
   View,
 } from 'react-native';
+// import ExploreScreen from './screens/Explore';
+// import ProfileScreen from './screens/Profile';
+// import BakeriesScreen from './screens/Bakeries';
+import { NavigationContainer } from '@react-navigation/native';
+import {createNativeStackNavigator} from '@react-navigation/native-stack'
 import ExploreScreen from './screens/Explore';
-import ProfileScreen from './screens/Profile';
 import BakeriesScreen from './screens/Bakeries';
+import ProfileScreen from './screens/Profile';
 
+const RootStack = createNativeStackNavigator();
 
 function App(): JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
 
-  return <BakeriesScreen />;
+  // return <BakeriesScreen />;
   // return <ExploreScreen />;
   // return <ProfileScreen />;
 
   return (
-    <SafeAreaView>
-      <StatusBar
-        barStyle={isDarkMode ? 'light-content' : 'dark-content'}
-      />
-      <View>
-        <Text>Bakery App</Text>
-        <View style={styles.content}>
-          <Text>Explore</Text>
-          <Text>Bakeries</Text>
-          <Text>Profile</Text>
-        </View>
-      </View>
-    </SafeAreaView>
+    <NavigationContainer>
+      <RootStack.Navigator>
+        <RootStack.Screen name="Explore" component={ExploreScreen} />
+        <RootStack.Screen name="Bakeries" component={BakeriesScreen} />
+        <RootStack.Screen name="Explore" component={ProfileScreen} />
+      </RootStack.Navigator>
+    </NavigationContainer>
   );
 }
 
