@@ -29,29 +29,43 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 export type RootStackParams = {
   Explore;
-  Bakeries;
+  BakeriesStack: BakeryStackParams;
   Profile;
   Bakery: {
     name: string;
   };
 };
 
-const RootStack = createBottomTabNavigator()
+const RootStack = createBottomTabNavigator<RootStackParams>();
+
+export type BakeryStackParams = {
+  Bakeries;
+  Bakery: {
+    name: string;
+  };
+}
+
+const BakeryStack = createNativeStackNavigator<BakeryStackParams>();
+
+const BakeryScreenStack = () => {
+  return (
+    <BakeryStack.Navigator initialRouteName="Bakeries">
+      <BakeryStack.Screen name="Bakeries" component={BakeriesScreen}/>
+      <BakeryStack.Screen name="Bakery" component={BakeryScreen}/>
+    </BakeryStack.Navigator>
+  );
+};
 
 function App(): JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
-
-  // return <BakeriesScreen />;
-  // return <ExploreScreen />;
-  // return <ProfileScreen />;
 
   return (
     <NavigationContainer>
       <RootStack.Navigator initialRouteName='Explore'>
         <RootStack.Screen name="Explore" component={ExploreScreen} />
-        <RootStack.Screen name="Bakeries" component={BakeriesScreen} />
+        <RootStack.Screen name="BakeriesStack" component={BakeriesScreen} />
         <RootStack.Screen name="Profile" component={ProfileScreen} />
-        <RootStack.Screen name="Bakery" component={BakeryScreen} />
+        {/* <RootStack.Screen name="Bakery" component={BakeryScreen} /> */}
       </RootStack.Navigator>
     </NavigationContainer>
   );
