@@ -24,7 +24,9 @@ import BakeriesScreen from './screens/Bakeries';
 function App(): JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
 
-  return <BakeriesScreen />;
+  // return <BakeriesScreen />;
+  return <ExploreScreen />;
+  // return <ProfileScreen />;
 
   return (
     <SafeAreaView>

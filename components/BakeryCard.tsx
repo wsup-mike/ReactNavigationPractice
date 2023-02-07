@@ -1,3 +1,4 @@
+import React from "react";
 import { View, Text, StyleSheet} from "react-native";
 
 interface Props {
@@ -6,8 +7,8 @@ interface Props {
 
 const BakeryCard: React.FC<Props> = ({name}) => {
     return (
-        <View>
-            <Text>Bakery</Text>
+        <View style={styles.container}>
+            <Text>{name}</Text>
         </View>
     )
 };
@@ -15,6 +16,8 @@ const BakeryCard: React.FC<Props> = ({name}) => {
 const styles = StyleSheet.create({
     container: {
         backgroundColor: '#efefef',
+        padding: 16,
+        marginTop: 8,
     }
   });
 
