@@ -25,7 +25,13 @@ import ExploreScreen from './screens/Explore';
 import BakeriesScreen from './screens/Bakeries';
 import ProfileScreen from './screens/Profile';
 
-const RootStack = createNativeStackNavigator();
+export type RootStackParams = {
+  Explore;
+  Bakeries;
+  Profile;
+};
+
+const RootStack = createNativeStackNavigator<RootStackParams>();
 
 function App(): JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
