@@ -1,8 +1,9 @@
 # ReactNavigationPractice
 
 Practice Navigation Setup in React Native CLI project:
+- Yelp type app (Navigation and Authentication only)
 - TypeScript
-- Practice nesting 2 stack navigator componentsw within a Bottom Tab component
+- Practice nesting 2 stack navigator components within a Bottom Tab component
 
 iOS Screenshot:
 ![image](https://user-images.githubusercontent.com/40747156/217670716-d4c17bad-39c3-454b-9fa1-2f3cad37b8c6.png)
