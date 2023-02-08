@@ -36,7 +36,6 @@ const ExploreScreen = ({ navigation }: Props) => {
                     navigation.push('Bakery', {name: 'Red Ribbon Bakery'})
                 }} />
             </View>
-            <Menu />
         </ScrollView>
     );
 };

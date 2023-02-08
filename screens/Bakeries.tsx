@@ -49,7 +49,6 @@ const BakeriesScreen = ({navigation}: Props) => {
                     }}
                 />
             </ScrollView>
-            <Menu />
         </View>
     )
 };
