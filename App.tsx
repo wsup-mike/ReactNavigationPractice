@@ -72,7 +72,7 @@ function App(): JSX.Element {
 
   return (
     <NavigationContainer>
-      <RootStack.Navigator initialRouteName='Explore'>
+      <RootStack.Navigator initialRouteName='ExploreStack'>
         <RootStack.Screen name="ExploreStack" component={ExploreScreenStack} />
         <RootStack.Screen name="BakeryStack" component={BakeryScreenStack} />
         <RootStack.Screen name="Profile" component={ProfileScreen} />
