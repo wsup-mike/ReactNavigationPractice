@@ -49,6 +49,24 @@ const BakeryScreenStack = () => {
   );
 };
 
+export type ExploreStackParams = {
+  Explore;
+  Bakery: {
+    name: string;
+  };
+}
+
+const ExploreStack = createNativeStackNavigator<ExploreStackParams>();
+
+const ExploreScreenStack = () => {
+  return (
+    <ExploreStack.Navigator initialRouteName="Explore">
+      <ExploreStack.Screen name="Explore" component={ExploreScreen} />
+      <ExploreStack.Screen name="Bakery" component={BakeryScreen} />
+    </ExploreStack.Navigator>
+  );
+};
+
 function App(): JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
 
