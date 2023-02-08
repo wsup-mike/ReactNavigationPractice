@@ -20,6 +20,8 @@ import ProfileScreen from './screens/Profile';
 import BakeryScreen from './screens/Bakery';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import ExploreIcon from './icons/ExploreIcon';
+import BakeryIcon from './icons/BakeryIcon';
+import ProfileIcon from './icons/ProfileIcon';
 
 export type RootStackParams = {
   ExploreStack: undefined;
@@ -87,8 +89,22 @@ function App(): JSX.Element {
             tabBarLabel: "Explore",
           }}
         />
-        <RootStack.Screen name="BakeryStack" component={BakeryScreenStack} />
-        <RootStack.Screen name="Profile" component={ProfileScreen} />
+
+        <RootStack.Screen 
+          name="BakeryStack" 
+          component={BakeryScreenStack} 
+            options={{ 
+              tabBarIcon: ({ color, size }) => <BakeryIcon color={color} size={size} />,
+              tabBarLabel: "Bakery",
+            }}
+          />
+
+        <RootStack.Screen name="Profile" component={ProfileScreen} 
+          options={{ 
+            tabBarIcon: ({ color, size }) => <ProfileIcon color={color} size={size} />,
+            tabBarLabel: "Profile",
+          }}
+        />
       </RootStack.Navigator>
     </NavigationContainer>
   );
