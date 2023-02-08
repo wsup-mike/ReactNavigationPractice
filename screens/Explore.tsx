@@ -1,22 +1,39 @@
+import { NativeStackScreenProps } from "@react-navigation/native-stack";
 import React from "react";
 import { View, Text, StyleSheet, ScrollView } from "react-native";
+import { RootStackParams } from "../App";
 import BakeryCard from "../components/BakeryCard";
 import Menu from "../components/Menu";
 
-const ExploreScreen = () => {
+type Props = NativeStackScreenProps<RootStackParams, "ExploreStack">;
+
+const ExploreScreen = ({ navigation }: Props) => {
     return (
         <ScrollView style={styles.container}>
             <Text style={styles.screenTitle}>Bakeries</Text>
             <View>
                 <Text style={styles.sectionTitle}>Bakeries Near You</Text>
-                <BakeryCard name="Rowie's Bakery" />
-                <BakeryCard name="Mom's Bakery" />
-                <BakeryCard name="Red Ribbon Bakery" />
+                <BakeryCard name="Rowie's Bakery" onPress={() => {
+                    navigation.push('Bakery', {name: "Rowie's Bakery"})
+                }} />
+                <BakeryCard name="Mom's Bakery" onPress={() => {
+                    navigation.push('Bakery', {name: "Mom's Bakery"})
+                }} />
+                <BakeryCard name="Red Ribbon Bakery" onPress={() => {
+                    navigation.push('Bakery', {name: 'Red Ribbon Bakery'})
+                }} />
             
                 <Text>Most Popular Bakeries</Text>
-                <BakeryCard name="Rowie's Bakery" />
-                <BakeryCard name="Mom's Bakery" />
-                <BakeryCard name="Red Ribbon Bakery" />
+                <BakeryCard name="Rowie's Bakery" onPress={() => {
+                    navigation.push('Bakery', {name: "Rowie's Bakery"})
+                }} />
+                <BakeryCard name="Mom's Bakery" 
+                onPress={() => {
+                    navigation.push('Bakery', {name: "Mom's Bakery"})
+                }} />
+                <BakeryCard name="Red Ribbon Bakery" onPress={() => {
+                    navigation.push('Bakery', {name: 'Red Ribbon Bakery'})
+                }} />
             </View>
             <Menu />
         </ScrollView>

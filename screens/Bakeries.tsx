@@ -5,7 +5,7 @@ import BakeryCard from "../components/BakeryCard";
 import Menu from "../components/Menu";
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
 
-type Props = NativeStackScreenProps<RootStackParams, "Bakeries">;
+type Props = NativeStackScreenProps<RootStackParams, "BakeryStack">;
 
 const BakeriesScreen = ({navigation}: Props) => {
     return (

@@ -21,7 +21,7 @@ import BakeryScreen from './screens/Bakery';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 export type RootStackParams = {
-  Explore;
+  ExploreStack;
   BakeryStack: BakeryStackParams;
   Profile;
   Bakery: {
@@ -73,7 +73,7 @@ function App(): JSX.Element {
   return (
     <NavigationContainer>
       <RootStack.Navigator initialRouteName='Explore'>
-        <RootStack.Screen name="Explore" component={ExploreScreen} />
+        <RootStack.Screen name="ExploreStack" component={ExploreScreenStack} />
         <RootStack.Screen name="BakeryStack" component={BakeryScreenStack} />
         <RootStack.Screen name="Profile" component={ProfileScreen} />
       </RootStack.Navigator>
