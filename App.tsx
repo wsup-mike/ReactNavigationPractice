@@ -12,7 +12,7 @@ import {
 // import ExploreScreen from './screens/Explore';
 // import ProfileScreen from './screens/Profile';
 // import BakeriesScreen from './screens/Bakeries';
-import { NavigationContainer } from '@react-navigation/native';
+import { NavigationContainer, NavigatorScreenParams } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import ExploreScreen from './screens/Explore';
 import BakeriesScreen from './screens/Bakeries';
@@ -21,9 +21,9 @@ import BakeryScreen from './screens/Bakery';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 export type RootStackParams = {
-  ExploreStack;
-  BakeryStack: BakeryStackParams;
-  Profile;
+  ExploreStack: undefined;
+  BakeryStack: NavigatorScreenParams<BakeryStackParams>;
+  Profile: undefined;
   Bakery: {
     name: string;
   };
@@ -32,7 +32,7 @@ export type RootStackParams = {
 const RootStack = createBottomTabNavigator<RootStackParams>();
 
 export type BakeryStackParams = {
-  Bakeries;
+  Bakeries: undefined;
   Bakery: {
     name: string;
   };
@@ -50,7 +50,7 @@ const BakeryScreenStack = () => {
 };
 
 export type ExploreStackParams = {
-  Explore;
+  Explore: undefined;
   Bakery: {
     name: string;
   };
