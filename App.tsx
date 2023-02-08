@@ -1,10 +1,3 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- */
-
 import React from 'react';
 import type {PropsWithChildren} from 'react';
 import {
@@ -29,7 +22,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 export type RootStackParams = {
   Explore;
-  BakeriesStack: BakeryStackParams;
+  BakeryStack: BakeryStackParams;
   Profile;
   Bakery: {
     name: string;
@@ -50,8 +43,8 @@ const BakeryStack = createNativeStackNavigator<BakeryStackParams>();
 const BakeryScreenStack = () => {
   return (
     <BakeryStack.Navigator initialRouteName="Bakeries">
-      <BakeryStack.Screen name="Bakeries" component={BakeriesScreen}/>
-      <BakeryStack.Screen name="Bakery" component={BakeryScreen}/>
+      <BakeryStack.Screen name="Bakeries" component={BakeriesScreen} />
+      <BakeryStack.Screen name="Bakery" component={BakeryScreen} />
     </BakeryStack.Navigator>
   );
 };
@@ -63,9 +56,8 @@ function App(): JSX.Element {
     <NavigationContainer>
       <RootStack.Navigator initialRouteName='Explore'>
         <RootStack.Screen name="Explore" component={ExploreScreen} />
-        <RootStack.Screen name="BakeriesStack" component={BakeriesScreen} />
+        <RootStack.Screen name="BakeryStack" component={BakeryScreenStack} />
         <RootStack.Screen name="Profile" component={ProfileScreen} />
-        {/* <RootStack.Screen name="Bakery" component={BakeryScreen} /> */}
       </RootStack.Navigator>
     </NavigationContainer>
   );
