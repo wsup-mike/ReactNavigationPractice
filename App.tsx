@@ -43,7 +43,7 @@ const BakeryStack = createNativeStackNavigator<BakeryStackParams>();
 
 const BakeryScreenStack = () => {
   return (
-    <BakeryStack.Navigator initialRouteName="Bakeries">
+    <BakeryStack.Navigator initialRouteName="Bakeries" screenOptions={{ headerShown: false}}>
       <BakeryStack.Screen name="Bakeries" component={BakeriesScreen} />
       <BakeryStack.Screen name="Bakery" component={BakeryScreen} />
     </BakeryStack.Navigator>
