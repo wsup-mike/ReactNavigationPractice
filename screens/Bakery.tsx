@@ -3,12 +3,14 @@ import { View, Text, StyleSheet } from 'react-native';
 import { RootStackParams } from '../App';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import BakeryCard from '../components/BakeryCard';
+import TopBackNavigation from '../components/TopBackNavigation';
 
 type Props = NativeStackScreenProps<RootStackParams, "Bakery">;
 
 const BakeryScreen = ({ route, navigation }: Props) => {
     return (
         <View style={styles.container}>
+            <TopBackNavigation />
             <Text style={styles.screenTitle}>{route.params.name}</Text>
             <Text>Related Bakeries</Text>
             <BakeryCard 
