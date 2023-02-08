@@ -61,7 +61,7 @@ const ExploreStack = createNativeStackNavigator<ExploreStackParams>();
 
 const ExploreScreenStack = () => {
   return (
-    <ExploreStack.Navigator initialRouteName="Explore">
+    <ExploreStack.Navigator initialRouteName="Explore" screenOptions={{ headerShown: false}}>
       <ExploreStack.Screen name="Explore" component={ExploreScreen} />
       <ExploreStack.Screen name="Bakery" component={BakeryScreen} />
     </ExploreStack.Navigator>
