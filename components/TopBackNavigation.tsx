@@ -15,6 +15,7 @@ const TopBackNavigation = () => {
                 onPress={() => {
                     navigation.goBack();
                 }}
+                underlayColor="#f0ddcc"
             >
                 <BackIcon color='#3333' size={20} />
             </TouchableHighlight>
