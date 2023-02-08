@@ -1,5 +1,6 @@
+import React from 'react';
 import { useNavigation } from '@react-navigation/native';
-import { StyleSheet, View} from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import { TouchableHighlight} from 'react-native-gesture-handler';
 import BackIcon from '../icons/BackIcon';
 
@@ -8,8 +9,13 @@ const TopBackNavigation = () => {
     const navigation = useNavigation();
 
     return (
-        <View>
-            <TouchableHighlight>
+        <View style={styles.container}>
+            <TouchableHighlight 
+                style={styles.backButton}
+                onPress={() => {
+                    navigation.goBack();
+                }}
+            >
                 <BackIcon color='#3333' size={20} />
             </TouchableHighlight>
         </View>
