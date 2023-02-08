@@ -2,7 +2,7 @@ import React from "react";
 import { View, Text, StyleSheet, TouchableOpacity} from "react-native";
 import {useNavigation} from '@react-navigation/core';
 import { NativeStackNavigationProp } from "@react-navigation/native-stack/lib/typescript/src/types";
-import { RootStackParams } from "../App";
+import { RootStackParams } from "../AppTabNavigator";
 
 
 const Menu = () => {

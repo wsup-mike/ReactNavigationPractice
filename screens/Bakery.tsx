@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
-import { RootStackParams } from '../App';
+import { RootStackParams } from '../AppTabNavigator';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import BakeryCard from '../components/BakeryCard';
 import TopBackNavigation from '../components/TopBackNavigation';
