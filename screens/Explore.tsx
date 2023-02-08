@@ -14,7 +14,8 @@ const ExploreScreen = ({ navigation }: Props) => {
             <View>
                 <Text style={styles.sectionTitle}>Bakeries Near You</Text>
                 <BakeryCard name="Rowie's Bakery" onPress={() => {
-                    navigation.push('Bakery', {name: "Rowie's Bakery"})
+                    // navigation.push('Bakery', {name: "Rowie's Bakery"})
+                    navigation.navigate("BakeryStack", { screen: "Bakery", params: { name:  "Hello from Explorer!" }})
                 }} />
                 <BakeryCard name="Mom's Bakery" onPress={() => {
                     navigation.push('Bakery', {name: "Mom's Bakery"})
