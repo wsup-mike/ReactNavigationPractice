@@ -2,17 +2,20 @@ import React from 'react';
 import { useNavigation } from '@react-navigation/native';
 import { StyleSheet, View, TouchableOpacity } from 'react-native';
 import DrawerMenuIcon from '../icons/DrawerMenuIcon';
+import { DrawerNavigationProp } from '@react-navigation/drawer';
+import { RootStackParams } from '../AppTabNavigator';
 
 
 const TopDrawerNavigation = () => {
-    const navigation = useNavigation();
+    
+    const navigation = useNavigation<DrawerNavigationProp<RootStackParams>>();
 
     return (
         <View style={styles.container}>
             <TouchableOpacity
                 style={styles.backButton}
                 onPress={() => {
-                    navigation.goBack();
+                    (navigation as DrawerNavigationProp<RootStackParams>).toggleDrawer();
                 }}
             >
                 <DrawerMenuIcon color="#0073e5" size={20} />
