@@ -2,7 +2,7 @@ import React from "react";
 import { View, Text, ScrollView, StyleSheet } from "react-native";
 import { RootStackParams } from "../AppTabNavigator";
 import BakeryCard from "../components/BakeryCard";
-import TopDrawerNavigation from "../components/TopDrawerNavigation";
+import TopDrawerNavigator from "../components/TopDrawerNavigation";
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
 
 type Props = NativeStackScreenProps<RootStackParams, "BakeryStack">;
@@ -10,7 +10,7 @@ type Props = NativeStackScreenProps<RootStackParams, "BakeryStack">;
 const BakeriesScreen = ({navigation}: Props) => {
     return (
         <View style={styles.container}>
-            <TopDrawerNavigation />
+            <TopDrawerNavigator />
             <Text style={styles.screenTitle}>Bakeries Screen</Text>
             <ScrollView>
                 <BakeryCard 

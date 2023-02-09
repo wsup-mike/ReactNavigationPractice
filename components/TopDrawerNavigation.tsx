@@ -5,7 +5,7 @@ import DrawerMenuIcon from '../icons/DrawerMenuIcon';
 import { DrawerNavigationProp } from '@react-navigation/drawer';
 import { RootStackParams } from '../AppTabNavigator';
 
-const TopDrawerNavigation = () => {
+const TopDrawerNavigator = () => {
     
     const navigation = useNavigation<DrawerNavigationProp<RootStackParams>>();
 
@@ -37,4 +37,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default TopDrawerNavigation;
+export default TopDrawerNavigator;
