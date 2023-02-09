@@ -3,13 +3,14 @@ import React from "react";
 import { View, Text, StyleSheet, ScrollView } from "react-native";
 import { RootStackParams } from "../AppTabNavigator";
 import BakeryCard from "../components/BakeryCard";
-import Menu from "../components/Menu";
+import TopDrawerNavigation from "../components/TopDrawerNavigation";
 
 type Props = NativeStackScreenProps<RootStackParams, "ExploreStack">;
 
 const ExploreScreen = ({ navigation }: Props) => {
     return (
         <ScrollView style={styles.container}>
+            <TopDrawerNavigation />
             <Text style={styles.screenTitle}>Bakeries</Text>
             <View>
                 <Text style={styles.sectionTitle}>Bakeries Near You</Text>

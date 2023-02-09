@@ -1,10 +1,10 @@
 import React from 'react';
 import { useNavigation } from '@react-navigation/native';
 import { StyleSheet, View, TouchableOpacity } from 'react-native';
-import BackIcon from '../icons/BackIcon';
+import DrawerMenuIcon from '../icons/DrawerMenuIcon';
 
 
-const TopBackNavigation = () => {
+const TopDrawerNavigation = () => {
     const navigation = useNavigation();
 
     return (
@@ -15,7 +15,7 @@ const TopBackNavigation = () => {
                     navigation.goBack();
                 }}
             >
-                <BackIcon color="#0073e5" size={20} />
+                <DrawerMenuIcon color="#0073e5" size={20} />
             </TouchableOpacity>
         </View>
     );
@@ -35,4 +35,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default TopBackNavigation;
+export default TopDrawerNavigation;

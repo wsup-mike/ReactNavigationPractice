@@ -1,9 +1,11 @@
 import React from "react";
 import { View, Text, TouchableOpacity, StyleSheet } from "react-native"; 
+import TopDrawerNavigation from "../components/TopDrawerNavigation";
 
 const ProfileScreen = () => {
     return (
         <View style={styles.container}>
+            <TopDrawerNavigation />
             <Text>Profile Screen</Text>
             <Text>Name: John Doe</Text>
             <TouchableOpacity>
