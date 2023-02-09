@@ -14,7 +14,7 @@ const TopDrawerNavigator = () => {
             <TouchableOpacity
                 style={styles.backButton}
                 onPress={() => {
-                    (navigation as DrawerNavigationProp<RootStackParams>).toggleDrawer();
+                    navigation.openDrawer();
                 }}
             >
                 <DrawerMenuIcon color="#0073e5" size={20} />

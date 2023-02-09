@@ -74,8 +74,8 @@ function App(): JSX.Element {
   return (
     <NavigationContainer>
       <RootStack.Navigator initialRouteName='ExploreStack' screenOptions={{ 
-          tabBarActiveTintColor: "#e67a15", 
-          tabBarInactiveTintColor: "gray",
+          drawerActiveTintColor: "#e67a15", 
+          drawerInactiveTintColor: "gray",
           headerShown: false,
         }}
       >
